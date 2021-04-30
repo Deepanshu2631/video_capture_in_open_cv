@@ -1,4 +1,5 @@
 import cv2
+import datetime
 cap = cv2.VideoCapture(0)#capture video and store in variable
 #we can get the default webcam resolution using get method
 print(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
