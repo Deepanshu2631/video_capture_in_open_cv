@@ -11,7 +11,9 @@ while(True):# run continuously
     font  = cv2.FONT_HERSHEY_DUPLEX
     text = 'width' + str(cap.get(3)) +'hieght'+str(cap.get(4))
     frame = cv2.putText(frame , text , (10 , 50) , font , 1, (200, 210, 200), 2 , cv2.LINE_AA)#to print width and hieght in frame
-
+     datet = str(datetime.datetime.now())# for showing live date and time but you have to import datetime
+     frame = cv2.putText(frame, datet, (10, 700), font, 1, (200, 210, 200), 2, cv2.LINE_AA)
+       
     cv2.imshow('frame' ,  frame)#show frame
     if cv2.waitKey(1) & 0XFF ==  ord('q'):
         #when q will pressed clos loop and quit window
